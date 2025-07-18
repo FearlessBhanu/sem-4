@@ -240,7 +240,20 @@ public class ATMApp {
         user1.addAccount(new CheckingAccount("CHK123", "Alice", 1000));
         user1.addAccount(new SavingsAccount("SAV123", "Alice", 5000));
 
+        User user2 = new User("Bhanu", "4321");
+        user2.addAccount(new CheckingAccount("CHK123", "Bhanu", 9000));
+        user2.addAccount(new SavingsAccount("SAV123", "Bhanu", 5000));
+
+        User user3 = new User("Sanjay", "1012");
+        user3.addAccount(new CheckingAccount("CHK123", "Sanjay", 8000));
+        user3.addAccount(new SavingsAccount("SAV123", "Sanjay", 4000));
+
+
         atm.registerUser(user1);
+        atm.registerUser(user2);
+        atm.registerUser(user3);
+
+
         atm.start();
 
         scanner.close(); // important to close the scanner at the end
